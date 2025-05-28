@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-display: 'Segoe UI', 'sans-serif';
+	--color-accent: #e71d36;
+	--color-accent-hover: #d61d33;
+	--color-main: #202020;
+	--color-white: #ffffff;
+	--color-gray-text: #bcbcbc;
+	--color-darkgray-text: rgba(117, 117, 117, 1);
+	--color-border-input: #e5e5e5;
+}
+
+.btn {
+	@apply bg-(--color-accent) hover:bg-(--color-accent-hover) rounded-md text-(--color-white) transition-colors duration-300;
+}
+
+.container {
+	@apply w-[90vw]  lg:w-[80vw] xl:w-[65vw] 2xl:w-[60vw];
+}
+
+.nav-hover {
+	@apply relative after:absolute after:w-0 after:h-[1px] after:bg-(--color-gray-text) after:content-[""] after:bottom-0 after:left-0 hover:after:w-full transition-all after:duration-300 after:ease-[cubic-bezier(0.4,0,0.2,1)];
+}
+
+:root {
+	@apply font-display;
+	line-height: 1.5;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+}
